@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(200, 226, 248);
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+.topo{
+    width: 100%;
+    height: auto;
+}
+.topo img{
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(5%) brightness(1.0);;
+}
+.texto-inicial{
+    text-align: center;
+    padding: 20px;
+}
+
+.navios {
+    background-color:rgb(200, 226, 248);
+    columns: 4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    columns: 4;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cards {
+    border: 0;
+    justify-content: space-between;
+    margin: 15px 15px 25px 27px;
+    cursor: pointer;
+    border: 0;
+    flex-direction: column;
+    background-color:white;
+    border-radius: 8px;
+    padding: 0.8rem;
+    transition: transform 0.2s ease;
+    column-gap: 10px;
+    box-shadow: 20px 20px 50px -30px #2c0c33;
+  }
+  
+  .cards:hover {
+    transform: scale(1.1);
+  }
+  
+  .cards img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .cards h1{
+    color:rgb(6, 4, 102);
+    margin-bottom: 10px;
+  }
+  .cards p {
+    color:black;
+    text-align: left;
+    font-size: small;
+  }
+  .cards button {
+    background-color:rgb(6, 4, 102);
+    border: 0;
+    border-radius: 20px;
+    padding: 0.5rem;
+  }
+  
+  .cards button:hover {
+    background-color: #1d20d8;
+  }
+  .cards a{
+    color: white;
+    text-decoration: none;
+  }
+  h2{
+    margin-bottom: 15px;
+    text-align: center;
+    color:rgb(6, 4, 102) ;
+  }
+  .paises{
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    border-radius: 16px;
+
+  }
+  .lugares-impar{
+  display: flex;
+  }
+
+  .lugares-impar img{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  .lugares-impar p{
+    margin: 15px ;
+  }
+
+  footer{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-image: url(https://static.vecteezy.com/ti/fotos-gratis/t2/9496531-close-up-oceano-azul-agua-superficie-no-oceano-profundo-gratis-foto.jpg);
+  }
+  @media screen and (max-width: 600px) 
+  {
+    .cards{
+        margin:auto;
+        margin-bottom: 20px;
+    }
+    .paises{
+        padding-top: 15px;
+    }
+    .lugares-impar{
+        flex-direction: column;
+    }
+    .lugares-impar img{
+        margin:auto;
+        width: 90%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+  }
