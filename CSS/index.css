@@ -39,9 +39,10 @@ body{
   }
   
   .cards {
+    width: 250px;
     border: 0;
     justify-content: space-between;
-    margin: 15px 15px 25px 27px;
+    margin: 15px;
     cursor: pointer;
     border: 0;
     flex-direction: column;
