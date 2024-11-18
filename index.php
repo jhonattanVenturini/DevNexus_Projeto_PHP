@@ -24,21 +24,21 @@ include('./PHP/conexao.php')
             </p>
         </section>
         <section class="navios">
-            <div class="container">
-                <?php
-                foreach ($navios as $navio) {
-                    echo "<div class='cards'>";
-                    echo "<img src='./ASSETS/{$navio['codigo_navio']}.webp' alt='imagem do navio'>";
-                    echo "<h1>" . htmlspecialchars($navio['nome_navio']) . "</h1>";
-                    echo "<p>Ano de Construção: " . htmlspecialchars($navio['ano_construcao']) . "</p>";
-                    echo "<p>Número de Tripulantes: " . htmlspecialchars($navio['num_tripulantes']) . "</p>";
-                    echo "<p>Número de Passageiros: " . htmlspecialchars($navio['num_passageiros']) . "</p>";
-                    echo "<br>";
-                    echo "<button><a href='./detalhes.php?codigo_navio=" . htmlspecialchars($navio['codigo_navio']) . "' target='_self'>Mais Informações</a></button>";
-                    echo "</div>";
-                }
-                ?>
-            </div>
+        <div class="container">
+            <?php
+            foreach ($navios as $navio) {
+                echo "<div class='cards'>";
+                echo "<img src='./ASSETS/{$navio['codigo_navio']}.webp' alt='imagem do navio'>";
+                echo "<h1>" . htmlspecialchars($navio['nome_navio']) . "</h1>";
+                echo "<p>Ano de Construção: " . htmlspecialchars($navio['ano_construcao']) . "</p>";
+                echo "<p>Número de Tripulantes: " . htmlspecialchars($navio['num_tripulantes']) . "</p>";
+                echo "<p>Número de Passageiros: " . htmlspecialchars($navio['num_passageiros']) . "</p>";
+                echo "<br>";
+                echo "<button><a href='./detalhes.php?codigo_navio=" . htmlspecialchars($navio['codigo_navio']) . "' target='_self'>Mais Informações</a></button>";
+                echo "</div>";
+            }
+            ?>
+        </div>
         </section>
         
         <h2> 7 principais países de destino </h2>
