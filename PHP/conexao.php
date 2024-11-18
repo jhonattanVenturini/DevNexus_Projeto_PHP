@@ -12,20 +12,20 @@ if ($conexao->connect_error) {
 
 // Função para obter o próximo código do navio
 function proximoCodigoNavio($codigo_atual) {
-    // Lógica para determinar o próximo código
-    // Adapte essa lógica conforme a sua estrutura de códigos
-    $ultimo_digito = substr($codigo_atual, -1);
-    $novo_digito = intval($ultimo_digito) + 1;
-    return substr($codigo_atual, 0, -1) . $novo_digito;
+    $prefix = substr($codigo_atual, 0, 1); // Assume prefixo é 'N'
+    $numero = intval(substr($codigo_atual, 1)); // Obtém o número como inteiro
+    $novo_numero = $numero + 1;
+    return $prefix . str_pad($novo_numero, 2, '0', STR_PAD_LEFT); // Gera novo código
 }
 
 // Código inicial do navio (pode ser ajustado)
 $codigo_navio = 'N01';
 $navios = [];
+$max_iteracoes = 50; // Limite de iterações para evitar loop infinito
 
-while (true) {
+for ($i = 0; $i < $max_iteracoes; $i++) {
     // Consulta ao banco de dados
-    $sql = "SELECT codigo_navio, nome_navio, ano_construcao, num_tripulantes, num_passageiros FROM navios WHERE codigo_navio >= ? ORDER BY codigo_navio ASC LIMIT 1";
+    $sql = "SELECT codigo_navio, nome_navio, ano_construcao, num_tripulantes, num_passageiros FROM navios WHERE codigo_navio = ? ORDER BY codigo_navio ASC LIMIT 1";
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param("s", $codigo_navio);
     $stmt->execute();
@@ -39,7 +39,7 @@ while (true) {
         // Obtendo o próximo código para a próxima iteração
         $codigo_navio = proximoCodigoNavio($codigo_navio);
     } else {
-        break;
+        break; // Sai do loop se não encontrar mais navios
     }
 }
 
