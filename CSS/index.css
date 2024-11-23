@@ -4,18 +4,23 @@
 }
 
 body{
-    background-color: rgb(200, 226, 248);
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
-.topo{
-    width: 100%;
-    height: auto;
+
+main{
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6FcaTrzyff8qcIEN7UiPAb5MkQiNUue7DE0_huMo9MrSKjgCntmL6KhfzU-y);
 }
-.topo img{
-    width: 100%;
-    object-fit: cover;
-    filter: grayscale(5%) brightness(1.0);;
+.topo {
+  width: 100%;
 }
+
+.topo img {
+  background-color: black;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(5%) brightness(1.0);
+}
+
 .texto-inicial{
     text-align: center;
     padding: 20px;
@@ -101,7 +106,7 @@ body{
 
   }
   .lugares-impar{
-  display: flex;
+    display: flex;
   }
 
   .lugares-impar img{
@@ -117,11 +122,15 @@ body{
   }
 
   footer{
+    object-fit: cover;
+    filter: grayscale(22%) brightness(1.2);
+    padding: 0.5rem;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6FcaTrzyff8qcIEN7UiPAb5MkQiNUue7DE0_huMo9MrSKjgCntmL6KhfzU-y);
     width: 100%;
     text-align: center;
-    color: white;
-    background-image: url(https://static.vecteezy.com/ti/fotos-gratis/t2/9496531-close-up-oceano-azul-agua-superficie-no-oceano-profundo-gratis-foto.jpg);
+    color: black
   }
+
   @media screen and (max-width: 600px) 
   {
     .cards{
