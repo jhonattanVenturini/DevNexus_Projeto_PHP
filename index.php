@@ -14,7 +14,8 @@ include('./PHP/conexao.php')
 
 <body>
 <header>
-        <section class="topo"><img src="" alt="Logotipo"></section>
+<img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="">
+<h1>Royal Caribbean</h1>
     </header>
     <main>
         <section class="texto-inicial">
@@ -86,15 +87,7 @@ navio.
 
         </section>
         <br>
-        <footer>
-            <ul>
-                <li>Clara Yumi Almeida Kohama</li>
-                <li>Jhonattan de Carvalho Romão Venturini</li>
-                <li>Larissa Trevisani Amaral</li>
-                <li>Vinícius Pereira Garcia</li>
-            </ul>
-            &copy;2024
-        </footer>
+     
     </main>
 </body>
 

@@ -4,21 +4,23 @@
 }
 
 body{
+    background-color: rgb(200, 226, 248);
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
-
-main{
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6FcaTrzyff8qcIEN7UiPAb5MkQiNUue7DE0_huMo9MrSKjgCntmL6KhfzU-y);
-}
-.topo {
+header{
+  padding: 10px;
   width: 100%;
+  background-color:rgb(6, 4, 102);
+  display: inline-flex;
 }
-
-.topo img {
-  background-color: black;
-  width: 100%;
-  object-fit: cover;
-  filter: grayscale(5%) brightness(1.0);
+header img{
+  margin-left: 10px;
+  padding: 5px;
+  width: 4%;
+}
+header h1{
+margin: 10px;
+  color: white;
 }
 
 .texto-inicial{
@@ -121,18 +123,12 @@ main{
     margin: 15px ;
   }
 
-  footer{
-    object-fit: cover;
-    filter: grayscale(22%) brightness(1.2);
-    padding: 0.5rem;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX6FcaTrzyff8qcIEN7UiPAb5MkQiNUue7DE0_huMo9MrSKjgCntmL6KhfzU-y);
-    width: 100%;
-    text-align: center;
-    color: black
-  }
-
+ 
   @media screen and (max-width: 600px) 
   {
+    header img{
+        width: 15%;
+    }
     .cards{
         margin:auto;
         margin-bottom: 20px;
