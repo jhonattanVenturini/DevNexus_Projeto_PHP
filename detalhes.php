@@ -12,7 +12,8 @@ if ($conexao->connect_error) {
 }
 
 // Função para obter o próximo código do navio
-function proximoCodigoNavio($codigo_atual) {
+function proximoCodigoNavio($codigo_atual)
+{
     $prefix = substr($codigo_atual, 0, 1); // Assume prefixo é 'N'
     $numero = intval(substr($codigo_atual, 1)); // Obtém o número como inteiro
     $novo_numero = $numero + 1;
@@ -42,6 +43,7 @@ $conexao->close();
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,6 +51,7 @@ $conexao->close();
     <link rel="icon" type="image/x-icon" href="./ASSETS/LOGO.webp">
     <title><?php echo htmlspecialchars($navio['nome_navio']); ?></title>
 </head>
+
 <body>
     <header>
         <section class="topo"><img src="" alt="Logotipo"></section>
@@ -58,9 +61,10 @@ $conexao->close();
         <section>
             <div class="container">
                 <fieldset class="conteudo">
-                    <h1 style="padding: 5px;"><?php echo htmlspecialchars($navio['nome_navio']); ?></h1>
-                    <h3 class="definicao">Ícone de férias em família</h3>
-                    <img src="./ASSETS/<?php echo htmlspecialchars($navio['codigo_navio']); ?>.webp" alt="Imagem do navio" class="img" />
+                    <div class="infos">
+                        <h1 style="padding: 5px;"><?php echo htmlspecialchars($navio['nome_navio']); ?></h1>
+                        <img src="./ASSETS/<?php echo htmlspecialchars($navio['codigo_navio']); ?>.webp" alt="Imagem do navio" class="img" />
+                    </div>
                     <p>
                         Um texto publicitário sobre o navio. Os navios são embarcações de grande porte projetadas para navegar em mares e oceanos, desempenhando papéis essenciais no transporte de pessoas, bens e recursos. Utilizados há milênios, eles evoluíram de simples barcos a vela para complexas estruturas movidas por motores modernos. Existem diferentes tipos de navios, como cargueiros, petroleiros, cruzeiros e navios militares, cada um adaptado a funções específicas. Além de serem pilares do comércio global, eles também desempenham um papel vital em atividades como exploração científica, turismo e operações de resgate. Suas dimensões impressionantes e tecnologias avançadas refletem a engenhosidade humana em domar as águas e conectar o mundo.
                     </p>
@@ -78,9 +82,11 @@ $conexao->close();
                         <li><b>Idiomas a bordo:</b> <?php echo htmlspecialchars($navio['idiomas_abordo']); ?></li>
                     </ul>
                 </fieldset>
+            </div>
         </section>
 
         <footer>&copy;2024</footer>
     </main>
 </body>
+
 </html>

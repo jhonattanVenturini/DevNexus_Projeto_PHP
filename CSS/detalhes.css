@@ -8,56 +8,55 @@ body {
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
 
-.topo {
-    width: 100%;
-    height: auto;
-}
-
-.topo img {
-    width: 100%;
-    object-fit: cover;
-    filter: grayscale(5%) brightness(1.0);;
-}
-
 .container {
-    padding: 4px;
+    padding: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .conteudo {
-    width: 50%;
+    width: 1000px;
     background-color: #ffffff;
     border: none;
     border-radius: 5px;
-    padding: 15px;
-    margin: 15px 5px 15px 5px;
+    padding: 20px;
     box-shadow: 4px 4px 12px #656161;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.definicao {
-    color: #000000;
-    padding: 5px;
+.infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
-.conteudo img {
-    align-items: center;
-    height: 60%;
-    width: 100%;
+.infos img {
+    width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+h1 {
+    padding: 10px 0;
 }
 
 p {
-    padding: 5px;
+    padding: 10px;
     text-align: justify;
-    margin: 5px
+    margin: 5px 0;
 }
 
 ul {
-    padding: 5px;
-    list-style: none;
     text-align: justify;
+    list-style: none;
+    margin-top: 20px;
 }
 
 footer {
@@ -65,4 +64,48 @@ footer {
     text-align: center;
     color: white;
     background-image: url(https://static.vecteezy.com/ti/fotos-gratis/t2/9496531-close-up-oceano-azul-agua-superficie-no-oceano-profundo-gratis-foto.jpg);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .conteudo {
+        width: 100%;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .infos {
+        align-items: center;
+    }
+
+    .infos img {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+    }
+
+    p,
+    ul {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .conteudo {
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
 }
