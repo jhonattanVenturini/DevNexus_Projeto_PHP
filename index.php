@@ -13,11 +13,13 @@ include('./PHP/conexao.php')
 </head>
 
 <body>
-    <header>
+<header>
         <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="">
         <h1>Royal Caribbean</h1>
     </header>
+
     <main>
+       <section class="topo"><img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/icon/assets/icon-of-the-seas-aerial-sea-day-crop-water.jpg?$1440x360$" alt=""></section>
         <section class="texto-inicial">
             <p>
                 Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
@@ -45,7 +47,7 @@ include('./PHP/conexao.php')
             </div>
         </section>
 
-        <h2> 7 principais países de destino </h2>
+        <h2> 7 Principais países de destino </h2>
         <section class="paises">
 
             <div class="lugares-impar">
@@ -84,10 +86,20 @@ include('./PHP/conexao.php')
                 <p><b>Singapura</b>: Um dos destinos mais progressistas do Sudeste Asiático, Singapura é onde os bilionários vão para desabafar, as mentes mais brilhantes do mundo se reúnem para discutir a tecnologia do futuro e a história multicultural é abraçada através da arte, arquitetura e histórias. Faça um cruzeiro para Singapura para sentir a umidade suave da Reserva Natural de Bukit Timah, uma floresta tropical que domina o centro do país, ou dê um passeio pela Haji Lane no centro da cidade, um bairro eclético com murais malaios ousados e coloridos em todas as paredes. Não perca o Gardens on the Bay, lar de superárvores futuristas, e caminhe pela OCBC Skyway de 22 metros de altura com vista para a cidade. Descubra a magia com um cruzeiro em Singapura.</p>
             </div>
 
-
+<br>
         </section>
         <br>
-
+ <footer>
+        <h1>&copy;2024</h1>
+        <div class="container-footer">
+          <ul>
+            <li>Clara Yumi Almeida Kohama</li>
+            <li>Jhonattan de Carvalho Romão Venturini</li>
+            <li>Larissa Trevisani Amaral</li>
+            <li>Vinícius Pereira Garcia</li>
+          </ul>
+          </div>
+    </footer>
     </main>
 </body>
 
