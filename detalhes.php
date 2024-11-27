@@ -4,6 +4,9 @@ $username = "root";
 $password = "";
 $bd = "db_royal";
 
+
+
+
 // Estabelece a conexão com o banco de dados
 $conexao = new mysqli($servidor, $username, $password, $bd);
 
@@ -50,9 +53,7 @@ $conexao->close();
     <title><?php echo htmlspecialchars($navio['nome_navio']); ?></title>
 </head>
 <body>
-    <header>
-        <section class="topo"><img src="" alt="Logotipo"></section>
-    </header>
+    <?php include 'PHP/header.php';?>
 
     <main>
         <section>

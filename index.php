@@ -16,7 +16,7 @@ include('./PHP/conexao.php')
 <header>
 <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="">
 <h1>Royal Caribbean</h1>
-    </header>
+</header>
     <main>
         <section class="texto-inicial">
             <p>
