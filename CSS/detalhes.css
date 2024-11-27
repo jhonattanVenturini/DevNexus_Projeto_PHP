@@ -8,15 +8,20 @@ body {
   font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
 
-.topo {
+header{
+  padding: 10px;
   width: 100%;
-  height: auto;
+  background-color:rgb(6, 4, 102);
+  display: inline-flex;
 }
-
-.topo img {
-  width: 100%;
-  object-fit: cover;
-  filter: grayscale(5%) brightness(1.0);;
+header img{
+  margin-left: 10px;
+  padding: 5px;
+  width: 4%;
+}
+header h1{
+  margin: 10px;
+  color: white;
 }
 
 .container {
