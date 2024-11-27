@@ -26,7 +26,7 @@ function proximoCodigoNavio($codigo_atual) {
 $codigo_navio = isset($_GET['codigo_navio']) ? $_GET['codigo_navio'] : 'N01';
 
 // Consulta ao banco de dados para buscar os detalhes do navio
-$sql = "SELECT codigo_navio, nome_navio, ano_construcao, cabine_acessivel, largura, comprimento, toneladas, velocidade_navegacao, num_passageiros, num_tripulantes, num_decks, num_cabines, idiomas_abordo FROM navios WHERE codigo_navio = ?";
+$sql = "SELECT codigo_navio, nome_navio, ano_construcao, cabine_acessivel, largura, comprimento, toneladas, velocidade_navegacao, num_passageiros, num_tripulantes, num_decks, num_cabines, idiomas_abordo, descricao FROM navios WHERE codigo_navio = ?";
 $stmt = $conexao->prepare($sql);
 $stmt->bind_param("s", $codigo_navio);
 $stmt->execute();
@@ -63,7 +63,7 @@ $conexao->close();
                     <h3 class="definicao">Ícone de férias em família</h3>
                     <img src="./ASSETS/<?php echo htmlspecialchars($navio['codigo_navio']); ?>.webp" alt="Imagem do navio" class="img" />
                     <p>
-                        Um texto publicitário sobre o navio. Os navios são embarcações de grande porte projetadas para navegar em mares e oceanos, desempenhando papéis essenciais no transporte de pessoas, bens e recursos. Utilizados há milênios, eles evoluíram de simples barcos a vela para complexas estruturas movidas por motores modernos. Existem diferentes tipos de navios, como cargueiros, petroleiros, cruzeiros e navios militares, cada um adaptado a funções específicas. Além de serem pilares do comércio global, eles também desempenham um papel vital em atividades como exploração científica, turismo e operações de resgate. Suas dimensões impressionantes e tecnologias avançadas refletem a engenhosidade humana em domar as águas e conectar o mundo.
+                        <?php echo htmlspecialchars($navio['descricao']); ?>
                     </p>
                     <ul>
                         <li><b>Ano de Construção:</b> <?php echo htmlspecialchars($navio['ano_construcao']); ?></li>
