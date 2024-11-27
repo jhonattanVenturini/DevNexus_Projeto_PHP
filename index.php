@@ -13,18 +13,18 @@ include('./PHP/conexao.php')
 </head>
 
 <body>
-<header>
-<img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="">
-<h1>Royal Caribbean</h1>
+    <header>
+        <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="">
+        <h1>Royal Caribbean</h1>
     </header>
     <main>
         <section class="texto-inicial">
             <p>
-            Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
-de uma companhia é através de seus navios. Alguns se destacam pelo tamanho, luxo,
-espaços modernos ou ambiente familiar...Cada companhia se diferencia pelas
-características e estilo da sua frota. Aqui você encontra todas as informações sobre cada
-navio.
+                Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
+                de uma companhia é através de seus navios. Alguns se destacam pelo tamanho, luxo,
+                espaços modernos ou ambiente familiar...Cada companhia se diferencia pelas
+                características e estilo da sua frota. Aqui você encontra todas as informações sobre cada
+                navio.
             </p>
         </section>
         <section class="navios">
@@ -44,18 +44,18 @@ navio.
                 ?>
             </div>
         </section>
-        
+
         <h2> 7 principais países de destino </h2>
         <section class="paises">
 
             <div class="lugares-impar">
                 <img src="https://rccl-h.assetsadobe.com/is/image/content/dam/royal/data/ports/labadee-haiti/labadee-haiti-zipline-coast.jpg?$undefined$" alt="">
-               <p><b>Caribe</b>: Cruzeiro para o Caribe e descubra o mergulho do penhasco, a brisa, a areia entre os dedos dos pés, sem se preocupar com o ritmo da vida na ilha. Centenas de anos de história deixaram ruínas na selva dos tempos antigos e cidades coloniais vibrantes com edifícios pintados de forma brilhante que refletem uma história fascinante. Veja montanhas imponentes como Petit Piton em Santa Lúcia, explore as exuberantes florestas tropicais de Belize ou aumente sua adrenalina enquanto percorre as copas das árvores de Labadee ou Honduras. Se a natureza calma e contemplativa é mais sua praia, passe o dia admirando cachoeiras em cascata na Jamaica e os vivos recifes de coral de Bonaire, lar de arraias manta e peixes papagaios. Descubra a magia com um cruzeiro pelo Caribe.</p>
+                <p><b>Caribe</b>: Cruzeiro para o Caribe e descubra o mergulho do penhasco, a brisa, a areia entre os dedos dos pés, sem se preocupar com o ritmo da vida na ilha. Centenas de anos de história deixaram ruínas na selva dos tempos antigos e cidades coloniais vibrantes com edifícios pintados de forma brilhante que refletem uma história fascinante. Veja montanhas imponentes como Petit Piton em Santa Lúcia, explore as exuberantes florestas tropicais de Belize ou aumente sua adrenalina enquanto percorre as copas das árvores de Labadee ou Honduras. Se a natureza calma e contemplativa é mais sua praia, passe o dia admirando cachoeiras em cascata na Jamaica e os vivos recifes de coral de Bonaire, lar de arraias manta e peixes papagaios. Descubra a magia com um cruzeiro pelo Caribe.</p>
             </div>
             <br>
             <div class="lugares-impar">
                 <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ports-and-destinations/destinations/italy/italy-napoles-capri-hiking.jpg?$144x810$" alt="">
-                <p><b>Itália</b>: Faça um cruzeiro para a Itália e contemple arte e arquitetura de classe mundial, paisagens naturais atemporais e uma cena de comida e vinho contra a qual todos os outros são julgados. Caminhe pelas ruas animadas da Cidade Eterna de Roma e veja o Coliseu em sua enorme e antiga glória. Confira o inconfundível Duomo ('cúpula') de Florença e prove o seu caminho através das vinícolas das colinas vizinhas de Chianti. Ande de gôndola pelos canais serpentinos de Veneza, veja os brilhantes mosaicos de ouro da Basílica de São Marcos ou caminhe o vulcânico Monte Vesúvio e reabasteça com uma pizza napolitana clássica em Nápoles. Descubra a magia com um cruzeiro na Itália. 
+                <p><b>Itália</b>: Faça um cruzeiro para a Itália e contemple arte e arquitetura de classe mundial, paisagens naturais atemporais e uma cena de comida e vinho contra a qual todos os outros são julgados. Caminhe pelas ruas animadas da Cidade Eterna de Roma e veja o Coliseu em sua enorme e antiga glória. Confira o inconfundível Duomo ('cúpula') de Florença e prove o seu caminho através das vinícolas das colinas vizinhas de Chianti. Ande de gôndola pelos canais serpentinos de Veneza, veja os brilhantes mosaicos de ouro da Basílica de São Marcos ou caminhe o vulcânico Monte Vesúvio e reabasteça com uma pizza napolitana clássica em Nápoles. Descubra a magia com um cruzeiro na Itália.
                 </p>
             </div>
             <br>
@@ -70,7 +70,7 @@ navio.
             </div>
             <br>
             <div class="lugares-impar">
-                <img src="https://www.ncl.com/sites/default/files/1000x667-santorini-jade-cruise-1hero.jpg"alt="">
+                <img src="https://www.ncl.com/sites/default/files/1000x667-santorini-jade-cruise-1hero.jpg" alt="">
                 <p><b>Grécia</b>: Cruzeiro para a Grécia e Ilhas Gregas, onde templos, anfiteatros e aldeias preservados em cinzas vulcânicas ainda revelam os mistérios do passado. Desfrute de pôr do sol dramático em águas translúcidas enquanto explora os penhascos brancos de Milos, ou transporte-se para o passado antigo em ruínas encontradas em quase todas as ilhas gregas. O Templo de Aphaia paira sobre Aegina, enquanto a Ilha Delos abriga o incrível Terraço dos Leões. Você encontrará a mundialmente famosa Acrópole na Ilha de Rodes e o Akrotiri em Santorini. Mas não se esqueça de ver o sol nascer sobre o Egeu enquanto visita os renomados moinhos de vento de Mykonos. Descubra a magia com um cruzeiro pela Grécia e pelas Ilhas Gregas. </p>
             </div>
             <br>
@@ -87,7 +87,7 @@ navio.
 
         </section>
         <br>
-     
+
     </main>
 </body>
 

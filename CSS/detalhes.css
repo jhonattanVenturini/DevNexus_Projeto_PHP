@@ -1,13 +1,14 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: rgb(200, 226, 248);
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  background-color: rgb(200, 226, 248);
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
 }
 
+<<<<<<< HEAD
 .container {
     padding: 100px;
     display: flex;
@@ -108,4 +109,68 @@ footer {
     h1 {
         font-size: 1rem;
     }
+=======
+header{
+  padding: 10px;
+  width: 100%;
+  background-color:rgb(6, 4, 102);
+  display: inline-flex;
+}
+header img{
+  margin-left: 10px;
+  padding: 5px;
+  width: 4%;
+}
+header h1{
+  margin: 10px;
+  color: white;
+}
+
+.container {
+  padding: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.conteudo {
+  width: 50%;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px 5px 15px 5px;
+  box-shadow: 4px 4px 12px #656161;
+}
+
+.definicao {
+  color: #000000;
+  padding: 5px;
+}
+
+.conteudo img {
+  align-items: center;
+  height: 60%;
+  width: 100%;
+}
+
+p {
+  padding: 5px;
+  text-align: justify;
+  margin: 5px
+}
+
+ul {
+  padding: 5px;
+  list-style: none;
+  text-align: justify;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-image: url(https://static.vecteezy.com/ti/fotos-gratis/t2/9496531-close-up-oceano-azul-agua-superficie-no-oceano-profundo-gratis-foto.jpg);
+>>>>>>> e20a491471ecf2d85306c780db997f6057f8b81c
 }
