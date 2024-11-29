@@ -54,11 +54,11 @@ $conexao->close();
 </head>
 
 <body>
-    <header>
-        <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="">
-        <h1>Royal Caribbean</h1>
-    </header>
-
+<header>
+    <a href="index.php">
+    <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt=""> </a>
+    <h1>Royal Caribbean</h1>
+</header>
     <main>
         <section>
             <div class="container">
@@ -67,27 +67,39 @@ $conexao->close();
                         <h1 style="padding: 5px;"><?php echo htmlspecialchars($navio['nome_navio']); ?></h1>
                         <img src="./ASSETS/<?php echo htmlspecialchars($navio['codigo_navio']); ?>.webp" alt="Imagem do navio" class="img" />
                     </div>
-                    <p>
-                        <?php echo htmlspecialchars($navio['descricao']); ?>
-                    </p>
-                    <ul>
-                        <li><b>Ano de Construção:</b> <?php echo htmlspecialchars($navio['ano_construcao']); ?></li>
-                        <li><b>Cabine com acesso para cadeira de rodas:</b> <?php echo htmlspecialchars($navio['cabine_acessivel']); ?></li>
-                        <li><b>Largura:</b> <?php echo htmlspecialchars($navio['largura']); ?> m</li>
-                        <li><b>Comprimento:</b> <?php echo htmlspecialchars($navio['comprimento']); ?> m</li>
-                        <li><b>Toneladas:</b> <?php echo htmlspecialchars($navio['toneladas']); ?> tn</li>
-                        <li><b>Velocidade de Navegação:</b> <?php echo htmlspecialchars($navio['velocidade_navegacao']); ?> nós</li>
-                        <li><b>Número total de passageiros:</b> <?php echo htmlspecialchars($navio['num_passageiros']); ?></li>
-                        <li><b>Número de Tripulantes:</b> <?php echo htmlspecialchars($navio['num_tripulantes']); ?></li>
-                        <li><b>Nº Decks:</b> <?php echo htmlspecialchars($navio['num_decks']); ?></li>
-                        <li><b>Nº Cabines:</b> <?php echo htmlspecialchars($navio['num_cabines']); ?></li>
-                        <li><b>Idiomas a bordo:</b> <?php echo htmlspecialchars($navio['idiomas_abordo']); ?></li>
-                    </ul>
+                    <div class="infos2">
+                        <p>
+                            <?php echo htmlspecialchars($navio['descricao']); ?>
+                        </p>
+                        <ul>
+                            <li><b>Ano de Construção:</b> <?php echo htmlspecialchars($navio['ano_construcao']); ?></li>
+                            <li><b>Cabine com acesso para cadeira de rodas:</b> <?php echo htmlspecialchars($navio['cabine_acessivel']); ?></li>
+                            <li><b>Largura:</b> <?php echo htmlspecialchars($navio['largura']); ?> m</li>
+                            <li><b>Comprimento:</b> <?php echo htmlspecialchars($navio['comprimento']); ?> m</li>
+                            <li><b>Toneladas:</b> <?php echo htmlspecialchars($navio['toneladas']); ?> tn</li>
+                            <li><b>Velocidade de Navegação:</b> <?php echo htmlspecialchars($navio['velocidade_navegacao']); ?> nós</li>
+                            <li><b>Número total de passageiros:</b> <?php echo htmlspecialchars($navio['num_passageiros']); ?></li>
+                            <li><b>Número de Tripulantes:</b> <?php echo htmlspecialchars($navio['num_tripulantes']); ?></li>
+                            <li><b>Nº Decks:</b> <?php echo htmlspecialchars($navio['num_decks']); ?></li>
+                            <li><b>Nº Cabines:</b> <?php echo htmlspecialchars($navio['num_cabines']); ?></li>
+                            <li><b>Idiomas a bordo:</b> <?php echo htmlspecialchars($navio['idiomas_abordo']); ?></li>
+                        </ul>
+                    </div>
                 </fieldset>
             </div>
         </section>
 
-        <footer>&copy;2024</footer>
+        <footer>
+        <h1>&copy;2024</h1>
+        <div class="container-footer">
+          <ul>
+            <li>Clara Yumi Almeida Kohama</li>
+            <li>Jhonattan de Carvalho Romão Venturini</li>
+            <li>Larissa Trevisani Amaral</li>
+            <li>Vinícius Pereira Garcia</li>
+          </ul>
+          </div>
+    </footer>
     </main>
 </body>
 
