@@ -14,10 +14,10 @@ include('./PHP/conexao.php')
 
 <body>
 <header>
-        <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="">
-        <h1>Royal Caribbean</h1>
-    </header>
-
+    <a href="index.php">
+    <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt=""> </a>
+    <h1>Royal Caribbean</h1>
+</header>
     <main>
        <section class="topo"><img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/icon/assets/icon-of-the-seas-aerial-sea-day-crop-water.jpg?$1440x360$" alt=""></section>
         <section class="texto-inicial">
