@@ -24,7 +24,7 @@ include('./PHP/conexao.php')
             <p>
                 Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
                 de uma companhia é através de seus navios. Alguns se destacam pelo tamanho, luxo,
-                espaços modernos ou ambiente familiar...Cada companhia se diferencia pelas
+                espaços modernos ou ambiente familiar. Cada companhia se diferencia pelas
                 características e estilo da sua frota. Aqui você encontra todas as informações sobre cada
                 navio.
             </p>
