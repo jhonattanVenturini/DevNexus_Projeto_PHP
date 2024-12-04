@@ -1,6 +1,44 @@
-<?php
-include('./PHP/conexao.php')
-?>
+<?php 
+  $sql = " SELECT * FROM navios ";
+  $sql = $sql . " ORDER BY codigo_navio ASC";
+  $card = ""; 
+  $contador = 0;
+  $servidor = "localhost"; 
+  $usuario = "root"; 
+  $senha = ""; 
+  $banco = "db_royal"; 
+  $conexao = mysqli_connect($servidor, $usuario, $senha, $banco); $rs = mysqli_query($conexao, $sql); 
+  while ($registro = mysqli_fetch_assoc($rs)) { 
+    $contador = $contador + 1; 
+    $codigo_navio = htmlspecialchars($registro["codigo_navio"]); 
+    $nome_navio = htmlspecialchars($registro["nome_navio"]); 
+    $descricao = htmlspecialchars($registro["descricao"]); 
+    $ano_construcao = htmlspecialchars($registro["ano_construcao"]); 
+    $cabine_acessivel = htmlspecialchars($registro["cabine_acessivel"]); 
+    $largura = htmlspecialchars($registro["largura"]); 
+    $comprimento = htmlspecialchars($registro["comprimento"]); 
+    $toneladas = htmlspecialchars($registro["toneladas"]); 
+    $velocidade_navegacao = htmlspecialchars($registro["velocidade_navegacao"]); 
+    $num_passageiros = htmlspecialchars($registro["num_passageiros"]); 
+    $num_tripulantes = htmlspecialchars($registro["num_tripulantes"]); 
+    $num_decks = htmlspecialchars($registro["num_decks"]); 
+    $num_cabines = htmlspecialchars($registro["num_cabines"]); 
+    $idiomas_abordo = htmlspecialchars($registro["idiomas_abordo"]); 
+
+    $card .= '<div class="cards">';
+    $card .= '<h1>' . $nome_navio . '</h1>';
+    $card .= '<img src="./ASSETS/' . $codigo_navio . '.webp" alt="Imagem do navio">'; // Caminho da imagem corrigido
+    $card .= '<p>Ano de Construção: ' . $ano_construcao . '</p>';
+    $card .= '<p>Número de Tripulantes: ' . $num_tripulantes . '</p>';
+    $card .= '<p>Número de Passageiros: ' . $num_passageiros . '</p>';
+    $card .= '<br>';
+    $card .= '<button><a href="./detalhes.php?codigo_navio=' . $codigo_navio . '" target="_self">Mais Informações</a></button>';
+    $card .= '</div>';
+}
+ 
+ mysqli_free_result($rs); mysqli_close($conexao); ?>
+
+ 
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,15 +49,14 @@ include('./PHP/conexao.php')
     <link rel="icon" type="image/x-icon" href="./ASSETS/LOGO.webp">
     <title>Home</title>
 </head>
-
 <body>
 <header>
     <a href="index.php">
     <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt=""> </a>
     <h1>Royal Caribbean</h1>
 </header>
-    <main>
-       <section class="topo"><img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/icon/assets/icon-of-the-seas-aerial-sea-day-crop-water.jpg?$1440x360$" alt=""></section>
+<main>
+<section class="topo"><img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/icon/assets/icon-of-the-seas-aerial-sea-day-crop-water.jpg?$1440x360$" alt=""></section>
         <section class="texto-inicial">
             <p>
                 Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
@@ -28,24 +65,11 @@ include('./PHP/conexao.php')
                 características e estilo da sua frota. Aqui você encontra todas as informações sobre cada
                 navio.
             </p>
-        </section>
-        <section class="navios">
-            <div class="container">
-                <?php
-                foreach ($navios as $navio) {
-                    echo "<div class='cards'>";
-                    echo "<img src='./ASSETS/{$navio['codigo_navio']}.webp' alt='imagem do navio'>";
-                    echo "<h1>" . htmlspecialchars($navio['nome_navio']) . "</h1>";
-                    echo "<p>Ano de Construção: " . htmlspecialchars($navio['ano_construcao']) . "</p>";
-                    echo "<p>Número de Tripulantes: " . htmlspecialchars($navio['num_tripulantes']) . "</p>";
-                    echo "<p>Número de Passageiros: " . htmlspecialchars($navio['num_passageiros']) . "</p>";
-                    echo "<br>";
-                    echo "<button><a href='./detalhes.php?codigo_navio=" . htmlspecialchars($navio['codigo_navio']) . "' target='_self'>Mais Informações</a></button>";
-                    echo "</div>";
-                }
-                ?>
-            </div>
-        </section>
+            <section class="navios">
+    <div class="container">
+        <?php echo $card; ?> <!-- Corrigido para exibir os cards corretamente -->
+    </div>
+</section>
 
         <h2> 7 Principais países de destino </h2>
         <section class="paises">
