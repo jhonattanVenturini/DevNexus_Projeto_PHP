@@ -8,8 +8,9 @@
   $senha = ""; 
   $banco = "db_royal"; 
   $conexao = mysqli_connect($servidor, $usuario, $senha, $banco); $rs = mysqli_query($conexao, $sql); 
+
   while ($registro = mysqli_fetch_assoc($rs)) { 
-    $contador = $contador + 1; 
+
     $codigo_navio = htmlspecialchars($registro["codigo_navio"]); 
     $nome_navio = htmlspecialchars($registro["nome_navio"]); 
     $descricao = htmlspecialchars($registro["descricao"]); 
@@ -57,6 +58,7 @@
 </header>
 <main>
 <section class="topo"><img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/icon/assets/icon-of-the-seas-aerial-sea-day-crop-water.jpg?$1440x360$" alt=""></section>
+
         <section class="texto-inicial">
             <p>
                 Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
@@ -68,7 +70,7 @@
             <section class="navios">
     <div class="container">
         <?php echo $card; ?> <!-- Corrigido para exibir os cards corretamente -->
-    </div>
+</div>
 </section>
 
         <h2> 7 Principais países de destino </h2>

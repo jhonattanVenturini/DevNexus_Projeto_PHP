@@ -157,9 +157,10 @@ header h1 {
     transform: rotate(360deg);
   }
   .lugares-impar p{
+    text-align: justify;
     margin: 15px ;
   }
-.lugares-impar p b{
+  .lugares-impar p b{
   color: rgb(6, 4, 102);
 }
   footer {
