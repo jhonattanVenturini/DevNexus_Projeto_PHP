@@ -43,59 +43,6 @@ Antes de executar o projeto, certifique-se de ter instalado:
 
 ## ⚙️ Estrutura do Projeto
 ```
-Perfeito! A estrutura do projeto foi atualizada para incluir o index.php na raiz, com o README.md sendo o último item, conforme solicitado.
-
-Aqui está a versão final e corrigida do README.md:
-
-Markdown
-
-# DevNexus PHP 🚢
-
-Projeto desenvolvido com **PHP** e **MySQL** no backend, utilizando **HTML** e **CSS** para marcação e estilização da interface.  
-O sistema foi pensado para exibir os **navios da companhia Royal Caribbean**, organizados em **cards dinâmicos** gerados via PHP, onde os dados são carregados diretamente do banco de dados, que contém **29 navios cadastrados**.
-
----
-
-## 🎯 Intuito do Trabalho
-
-O projeto foi criado com o objetivo de:
-- Consolidar o aprendizado em **desenvolvimento web full stack** (PHP + MySQL + HTML + CSS).
-- Explorar o uso de **banco de dados relacional** para gerenciamento de informações.
-- Criar uma aplicação prática com **design estruturado** e exibição de dados reais.
-- Simular uma plataforma que pudesse ser utilizada em **catálogos de navios da Royal Caribbean**.
-
----
-
-## 💡 Motivo da Criação
-
-A proposta do projeto surgiu a partir da necessidade de **organizar e apresentar os navios** da frota da Royal Caribbean em formato acessível, dinâmico e escalável.  
-O sistema funciona como um catálogo online, onde cada navio possui um card exibindo suas principais informações e características técnicas.
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- **PHP 8.2** → linguagem principal do backend.  
-- **MySQL/MariaDB 10.4** → banco de dados relacional com 29 navios cadastrados.  
-- **HTML5** → estrutura e marcação da página.  
-- **CSS3** → estilização e identidade visual.  
-
----
-
-## 📋 Pré-requisitos
-
-Antes de executar o projeto, certifique-se de ter instalado:
-
-- [XAMPP](https://www.apachefriends.org/) ou [WAMP](https://www.wampserver.com/) (para rodar PHP e MySQL).  
-- **PHP 7.4+ ou 8+**
-- **MySQL/MariaDB 5.7+**
-- Navegador atualizado (Chrome, Edge, Firefox...).  
-- Editor de código (VS Code, PHPStorm ou outro).  
-
----
-
-## ⚙️ Estrutura do Projeto
-
 /
 ├── ASSETS/         # Contém todas as fotos dos navios
 ├── CSS /            # Pasta com os arquivos de estilo
