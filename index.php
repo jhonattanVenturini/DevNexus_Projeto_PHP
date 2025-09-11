@@ -4,7 +4,6 @@
 // =================================================================
 
 // 1. Conexão com o Banco de Dados
-// (Idealmente, isso estaria em um arquivo separado como 'php/conexao.php')
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
@@ -23,16 +22,14 @@ $sql = "SELECT * FROM navios ORDER BY nome_navio ASC";
 $rs = mysqli_query($conexao, $sql);
 
 // 4. Busca todos os dados de uma vez para um array
-// Inicializa como array vazio para não dar erro se a tabela estiver vazia
 $navios = [];
 if ($rs) {
     $navios = mysqli_fetch_all($rs, MYSQLI_ASSOC);
 }
 
 // 5. Libera a memória e fecha a conexão
-mysqli_free_result($rs);
+if ($rs) mysqli_free_result($rs);
 mysqli_close($conexao);
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -48,73 +45,26 @@ mysqli_close($conexao);
 <body>
   <header>
     <a href="index.php">
-      <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="Logo Royal Caribbean"> </a>
+      <img src="https://www.royalcaribbean.com/content/dam/royal/resources/new-logo-rcg/RCI_Crown%2BAnchor_Symbol_White.png" alt="Logo Royal Caribbean">
+    </a>
     <h1>Royal Caribbean</h1>
   </header>
 
-<<<<<<< Updated upstream
-        <section class="texto-inicial">
-            <p>
-                Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
-                de uma companhia é através de seus navios. Alguns se destacam pelo tamanho, luxo,
-                espaços modernos ou ambiente familiar. Cada companhia se diferencia pelas
-                características e estilo da sua frota. Aqui você encontra todas as informações sobre cada
-                navio.
-            </p>
-<<<<<<< HEAD
-        </section>
-        <section class="navios">
-        <div class="container">
-            <?php
-            foreach ($navios as $navio) {
-                echo "<div class='cards'>";
-                echo "<img src='./ASSETS/{$navio['codigo_navio']}.webp' alt='imagem do navio'>";
-                echo "<h1>" . htmlspecialchars($navio['nome_navio']) . "</h1>";
-                echo "<p>Ano de Construção: " . htmlspecialchars($navio['ano_construcao']) . "</p>";
-                echo "<p>Número de Tripulantes: " . htmlspecialchars($navio['num_tripulantes']) . "</p>";
-                echo "<p>Número de Passageiros: " . htmlspecialchars($navio['num_passageiros']) . "</p>";
-                echo "<br>";
-                echo "<button><a href='./detalhes.php?codigo_navio=" . htmlspecialchars($navio['codigo_navio']) . "' target='_self'>Mais Informações</a></button>";
-                echo "</div>";
-            }
-            ?>
-        </div>
-        </section>
-        
-        <h2> 7 principais países de destino </h2>
-=======
-            <section class="navios">
-    <div class="container">
-        <?php echo $card; ?> <!-- Corrigido para exibir os cards corretamente -->
-</div>
-</section>
+  <section class="texto-inicial">
+    <p>
+      Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
+      de uma companhia é através de seus navios. Alguns se destacam pelo tamanho, luxo,
+      espaços modernos ou ambiente familiar. Cada companhia se diferencia pelas
+      características e estilo da sua frota. Aqui você encontra todas as informações sobre cada
+      navio.
+    </p>
+  </section>
 
-        <h2> 7 Principais países de destino </h2>
->>>>>>> developer
-        <section class="paises">
-=======
   <main>
-    <section class="topo">
-      <img src="https://assets.dm.rccl.com/is/image/RoyalCaribbeanCruises/royal/ships/icon/assets/icon-of-the-seas-aerial-sea-day-crop-water.jpg?$1440x360$" alt="Navio Icon of the Seas no oceano">
-    </section>
-
-    <section class="texto-inicial">
-      <p>
-        Você conhece a <b>Royal Caribbean</b>? A melhor forma de descobrir os diferenciais e vantagens
-        de uma companhia é através de seus navios. Alguns se destacam pelo tamanho, luxo,
-        espaços modernos ou ambiente familiar. Cada companhia se diferencia pelas
-        características e estilo da sua frota. Aqui você encontra todas as informações sobre cada
-        navio.
-      </p>
-    </section>
-
     <h2>Conheça a Nossa Frota</h2>
     <section class="navios">
       <div class="container">
-        <?php
-                // 6. Agora o loop foreach funciona corretamente, pois a variável $navios existe e é um array
-                foreach ($navios as $navio) :
-                ?>
+        <?php foreach ($navios as $navio) : ?>
         <div class='cards'>
           <img src='./ASSETS/<?php echo htmlspecialchars($navio['codigo_navio']); ?>.webp' alt='Imagem do navio <?php echo htmlspecialchars($navio['nome_navio']); ?>'>
           <h1><?php echo htmlspecialchars($navio['nome_navio']); ?></h1>
@@ -122,11 +72,13 @@ mysqli_close($conexao);
           <p>Número de Tripulantes: <?php echo htmlspecialchars($navio['num_tripulantes']); ?></p>
           <p>Número de Passageiros: <?php echo htmlspecialchars($navio['num_passageiros']); ?></p>
           <br>
-          <button><a href='./detalhes.php?codigo_navio=<?php echo htmlspecialchars($navio['codigo_navio']); ?>' target='_self'>Mais Informações</a></button>
+          <button>
+            <a href='./detalhes.php?codigo_navio=<?php echo htmlspecialchars($navio['codigo_navio']); ?>' target='_self'>
+              Mais Informações
+            </a>
+          </button>
         </div>
-        <?php
-                endforeach;
-                ?>
+        <?php endforeach; ?>
       </div>
     </section>
 
@@ -169,7 +121,6 @@ mysqli_close($conexao);
     </section>
     <br>
   </main>
->>>>>>> Stashed changes
 
   <footer>
     <h1>&copy;2024</h1>

@@ -1,221 +1,270 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
+
+html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-body{
-    background-color: rgb(200, 226, 248);
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+
+body {
+  background-color: rgb(200, 226, 248);
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
 }
+
+/* ================= HEADER ================= */
 header {
   padding: 10px;
   background-color: rgb(6, 4, 102);
-  display: flex; 
+  display: flex;
   align-items: center;
   width: 100%;
 }
-header a{
+
+header a {
   background-color: rgb(6, 4, 102);
 }
+
 header img {
   object-fit: contain;
-  width: 38px;       
-  height: 50px;   
-  margin-right: 10px;  
+  width: 38px;
+  height: 50px;
+  margin-right: 10px;
 }
+
 header h1 {
-  float: left;
   color: white;
- 
 }
-.topo{
+
+/* ================= TOPO ================= */
+.topo {
   width: 100%;
 }
-.topo img{
+
+.topo img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-.texto-inicial{
-    text-align: center;
-    padding: 20px;
-    padding-bottom: 0px;
+/* ================= TEXTO ================= */
+.texto-inicial {
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 0;
 }
 
+/* ================= NAVIOS ================= */
 .navios {
-    background-color:rgb(200, 226, 248);
-    columns: 4;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    columns: 4;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cards {
-    width: 250px;
-    border: 0;
-    justify-content: space-between;
-    margin: 15px;
-    cursor: pointer;
-    border: 0;
-    flex-direction: column;
-    background-color:white;
-    border-radius: 8px;
-    padding: 0.8rem;
-    transition: transform 0.2s ease;
-    column-gap: 10px;
-    box-shadow: 20px 20px 50px -30px #2c0c33;
-  }
-  
-  .cards:hover {
-    transform: scale(1.1);
-  }
-  
-  .cards img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  .cards h1{
-    color:rgb(6, 4, 102);
-    margin-bottom: 10px;
-  }
-  .cards p {
-    color:black;
-    text-align: left;
-    font-size: small;
-  }
-  .cards button {
-    background-color:rgb(6, 4, 102);
-    border: 0;
-    border-radius: 20px;
-    padding: 0.5rem;
-  }
-  
-  .cards button:hover {
-    background-color: #1d20d8;
-  }
-  .cards a{
-    color: white;
-    text-decoration: none;
-  }
-  h2{
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-    color:rgb(6, 4, 102) ;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: myanimation 3s infinite;
-  }
-  @keyframes myanimation {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  .paises{
-    justify-content: center;
-    width: 90%;
-    margin: auto;
-    background-color: white;
-    border-radius: 16px;
-    box-shadow: 20px 20px 50px -30px #2c0c33;
-  }
-  .lugares-impar{
-    display: flex;
-  }
+  background-color: rgb(200, 226, 248);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
 
-  .lugares-impar img{
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 16px;
-    transition: transform 0.4s ease;
-  }
-  .lugares-impar img:hover{
-    transform: rotate(360deg);
-  }
-  .lugares-impar p{
-    text-align: justify;
-    margin: 15px ;
-  }
-  .lugares-impar p b{
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cards {
+  width: 250px;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+  box-shadow: 20px 20px 50px -30px #2c0c33;
+}
+
+.cards:hover {
+  transform: scale(1.05);
+}
+
+.cards img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.cards h1 {
+  color: rgb(6, 4, 102);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.cards p {
+  color: black;
+  text-align: left;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.cards button {
+  background-color: rgb(6, 4, 102);
+  border: 0;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cards button:hover {
+  background-color: #1d20d8;
+}
+
+.cards a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ================= TITULOS ================= */
+h2 {
+  font-weight: bold;
+  margin: 40px 0 15px;
+  text-align: center;
+  color: rgb(6, 4, 102);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: pulsar 3s infinite;
+}
+
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* ================= PAISES ================= */
+.paises {
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 20px 20px 50px -30px #2c0c33;
+}
+
+/* Cada bloco de país */
+.lugar {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Imagem faixa/banner */
+.lugar img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+}
+
+/* Caixa de informações escondida inicialmente */
+.lugar-info {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(6, 4, 102, 0.95);
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: right 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Quando ativo → desliza para dentro */
+.lugar.ativo .lugar-info {
+  right: 0;
+}
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  background-color: white;
+  border: 2px solid rgb(6, 4, 102);
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-top: 30px;
+}
+
+footer h1 {
+  font-size: large;
   color: rgb(6, 4, 102);
 }
-  footer {
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(6, 4, 102);
+  font-size: clamp(10px, 3vw, 16px);
+  padding: 1rem;
+}
+
+.container-footer li {
+  font-weight: bold;
+  list-style: none;
+  margin: 6px 0;
+  color: #fff;
+}
+
+/* ================= RESPONSIVO ================= */
+@media screen and (max-width: 900px) {
+  .cards {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html { overflow-x: hidden; }
+
+  .topo img {
+    height: 150px;
+  }
+
+  .cards {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .paises {
+    padding-top: 15px;
+  }
+
+  .lugares-impar {
+    flex-direction: column;
     text-align: center;
-    background-color:white;
-    border:2px solid  rgb(6, 4, 102);
+  }
+
+  .lugares-impar img {
+    width: 100%;
+    max-width: 100%;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
   }
-  
-  footer h1 {
-    font-size: large;
-    color: rgb(6, 4, 102);
+
+  .lugares-impar p {
+    margin: 15px 5px;
   }
-  
-  .container-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color:rgb(6, 4, 102);
-    font-size: clamp(8px, 4vw, 16px);
-    padding: 1rem;
-  }
-  
-  .container-footer li {
-    font-weight: bold;
-    list-style: none;
-    margin: 10px 0;
-    color: #fff;
-  }
-  @media screen and (max-width: 600px) 
-  {
-   html{
-    overflow-x: hidden;
-   }
-    .topo img{
-      object-fit: cover;
-      width: 100%;
-      height: 100px;
-    }
-    .cards{
-        margin:auto;
-        margin-bottom: 20px;
-    }
-    .paises{
-        padding-top: 15px;
-    }
-    .lugares-impar{
-        flex-direction: column;
-    }
-    .lugares-impar img{
-        margin:auto;
-        width: 90%;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-    }
-  }
+}
